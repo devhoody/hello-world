@@ -1,34 +1,23 @@
+import java.util.Scanner;
+
 public class Gugudan {
 
-	public static int[] calculate(int times) {
-		int[] result = new int[9];
-		for (int i=0; i<result.length; i++) {
-			result[i] = times * (i + 1);
+public static void main(String[] args) {
+		System.out.println("원하는 구구단?");
+		Scanner scanner = new Scanner(System.in);
+		String inputValue = scanner.nextLine();
+		String[] splitValue = inputValue.split(",");
+		
+		int first = Integer.parseInt(splitValue[0]);
+		int second = Integer.parseInt(splitValue[1]);
+		
+		int[] result1 = new int[first];
+		int[] result2 = new int[second];
+		
+		for (int j=2; j<=result1.length; j++) {
+			for(int i=1; i<=result2.length; i++) {
+				System.out.println(j * i);
 		}
-		return result;
 	}
-	
-	public static void print(int[] result) {
-		for (int i=0; i<result.length; i++) {
-			System.out.println(result[i]);
-		}
-	}
-	
-	public static void main(String[] args) {
-		for (int j=2; j<10; j++) {
-			int[] result = calculate(j);
-			print(result);
-		}
-//		int[] result = calculate(2);
-//		print(result);
-//		
-//		int[] times3 = calculate(3);
-//		print(times3);
-//		
-//		int[] times4 = calculate(4);
-//		print(times4);
-//		
-//		int[] times5 = calculate(5);
-//		print(times5);
-	}
+}
 }

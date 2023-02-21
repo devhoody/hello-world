@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Gugudan {
 
 	public static void main(String[] args) {
-		
+		//수정테스트
 		System.out.println("원하는 구구단?");
 		Scanner scanner = new Scanner(System.in);
 		String Value = scanner.nextLine();
